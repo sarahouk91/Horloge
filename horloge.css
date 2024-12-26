@@ -1,0 +1,87 @@
+/* Style global */
+body {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Le cercle principal */
+#cercle {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+}
+
+/* Les chiffres */
+.chiffres {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+}
+
+/* Position des chiffres (comme une horloge classique) */
+#c1  { top: 15px; left: 140px; }
+#c2  { top: 45px; left: 173px; }
+#c3  { top: 90px; left: 180px; }
+#c4  { top: 135px; left: 165px; }
+#c5  { top: 165px; left: 135px; }
+#c6  { top: 180px; left: 90px; }
+#c7  { top: 165px; left: 45px; }
+#c8  { top: 135px; left: 15px; }
+#c9  { top: 90px; left: 0px; }
+#c10 { top: 45px; left: 15px; }
+#c11 { top: 15px; left: 45px; }
+#c12 { top: 0px; left: 90px; }
+
+/* Les aiguilles */
+.aiguille {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, 0);
+}
+
+#a_heures {
+    width: 6px;
+    height: 50px;
+    background-color: black;
+
+}
+
+#a_minutes {
+    width: 4px;
+    height: 70px;
+    background-color: black;
+
+}
+
+#a_secondes {
+    width: 2px;
+    height: 83px;
+    background-color: red;
+    
+}
+#centre {
+    position: absolute;
+    width: 10px; /* Taille du petit cercle */
+    height: 10px;
+    background-color: black; /* Couleur du cercle */
+    border-radius: 50%;
+    top: 50%; /* Positionnement au centre */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* S'assure qu'il est au-dessus des aiguilles */
+}
